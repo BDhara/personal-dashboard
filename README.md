@@ -29,13 +29,13 @@ This is a simple dashboard application built with React, using the `react-router
 
 - **src/styles**: Holds stylesheets, with CSS Modules for component-specific styling.
 
-- **src/App.js**: The main application component that includes the routing logic.
+- **src/App.js**: It is responsible for rendering the root component.
 
 - **src/index.js**: The entry point of the application.
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/your-username/dashboard-app.git`
+1. Clone the repository: `git clone https://github.com/BDhara/personal-dashboard.git`
 
 2. Install dependencies: `npm install`
 
