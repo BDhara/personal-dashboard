@@ -37,11 +37,13 @@ This is a simple dashboard application built with React, using the `react-router
 
 1. Clone the repository: `git clone https://github.com/BDhara/personal-dashboard.git`
 
-2. Install dependencies: `npm install`
+2. Move into directory: `cd personal-dashboard`
 
-3. Run the application: `npm run start`
+3. Install dependencies: `npm install`
 
-4. Open the application in your browser: [http://localhost:3000](http://localhost:3000)
+4. Run the application: `npm run start`
+
+5. Open the application in your browser: [http://localhost:3000](http://localhost:3000)
 
 ## To run the test
 

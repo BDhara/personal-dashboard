@@ -1,23 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Routes, Route, BrowserRouter, useNavigate } from 'react-router-dom';
 import styles from '../styles/UserProfile.module.css';
 import profileLogo from '../assets/profile.jpg';
 import ToDoList from './ToDoList';
 import Weather from './Weather';
-import '../styles/util.css'
+import '../styles/util.css';
 
 const Dashboard = ({ name, email }) => {
   const [infoVisible, setInfoVisible] = useState(false);
   const navigate = useNavigate();
+  const popupRef = useRef(null);
 
   const toggleInfoVisibility = () => {
     setInfoVisible(!infoVisible);
   };
 
+  const closePopup = (e) => {
+    // Close the popup if clicked outside of the popup area
+    if (popupRef.current && !popupRef.current.contains(e.target)) {
+      setInfoVisible(false);
+    }
+  };
+
+  const handleEscKey = (e) => {
+    // Close the popup if the Esc key is pressed
+    if (e.key === 'Escape') {
+      setInfoVisible(false);
+    }
+  };
+
   useEffect(() => {
     navigate('/weather');
-  }, []);
+    document.addEventListener('keydown', handleEscKey);
+    document.addEventListener('mousedown', closePopup);
 
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+      document.removeEventListener('mousedown', closePopup);
+    };
+  }, []);
 
   return (
     <div>
@@ -40,7 +61,7 @@ const Dashboard = ({ name, email }) => {
           onClick={toggleInfoVisibility}
         />
         {infoVisible && (
-          <div className={styles.popupInfo}>
+          <div ref={popupRef} className={styles.popupInfo}>
             <p>Welcome, {name}</p>
             <p>{email}</p>
           </div>
