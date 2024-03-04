@@ -1,0 +1,94 @@
+.toDoList {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.addTodo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.addTodo input {
+  flex-grow: 1;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.addTodo button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 45px;
+}
+
+.addTodo button svg {
+  margin-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+
+.todoItem label {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.todoItem input {
+  margin-right: 10px;
+}
+
+.todoItem span {
+  color: #333;
+}
+
+.completed span {
+  text-decoration: line-through;
+}
+
+.todoItem button {
+  padding: 8px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.todoItem button svg {
+  margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+  .addTodo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addTodo input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
