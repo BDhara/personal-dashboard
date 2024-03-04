@@ -15,7 +15,7 @@ This is a simple dashboard application built with React, using the `react-router
 
 ### Navigation
 
-- **React Router**: The application uses the `react-router-dom` library for client-side routing. Navigation between Weather and TodoList is handled through `Link` components, ensuring a smooth and responsive user experience.
+- **React Router**: The application uses the `react-router-dom` library for client-side routing. Navigation between Weather and TodoList is handled through `NavLink` components, ensuring a smooth and responsive user experience.
 
 ### Styling
 

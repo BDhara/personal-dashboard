@@ -17,7 +17,7 @@ const Dashboard = ({ name, email }) => {
   useEffect(() => {
     navigate('/weather');
   }, []);
-  
+
 
   return (
     <div>
@@ -26,12 +26,12 @@ const Dashboard = ({ name, email }) => {
           <p>Dashboard</p>
         </div>
         <div className={styles.navigation}>
-        <NavLink to="/weather" className={styles.navItem} activeClassName={styles.activeItem}>
+          <NavLink to="/weather" className={styles.navItem} activeClassName={styles.activeItem}>
             Weather
           </NavLink>
           <NavLink to="/todo" className={styles.navItem} activeClassName={styles.activeItem}>
             Todo
-          </NavLink>      
+          </NavLink>
         </div>
         <img
           className={styles.profilePicture}
@@ -45,7 +45,7 @@ const Dashboard = ({ name, email }) => {
             <p>{email}</p>
           </div>
         )}
-      </nav>      
+      </nav>
       <Routes>
         <Route path="/weather" element={<Weather />} />
         <Route path="/todo" element={<ToDoList />} />
